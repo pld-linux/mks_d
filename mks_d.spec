@@ -2,13 +2,14 @@ Summary:	Simple Daemon for mks32 for Linux
 Summary(pl):	Prosty demon dla mks32 dla Linuksa
 Name:		mks_d
 Version:	20040410
-Release:	3
+Release:	4
 License:	GPL
 Group:		Daemons
 Source0:	http://duch.mimuw.edu.pl/~hunter/mks_d/mksd-%{version}.tar.bz2
 # Source0-md5:	b5874b1dfaf482570977b63f783b6226
 BuildRequires:	sharutils
 Requires:	mks
+ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
