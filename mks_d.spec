@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/Deamons
 Source0:	http://duch.mimuw.edu.pl/~hunter/mks_d/mksd-%{version}.tar.bz2
 # Source0-md5:	b5874b1dfaf482570977b63f783b6226
+BuildRequires:	sharutils
 Requires:	mks
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
