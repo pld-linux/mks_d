@@ -1,6 +1,6 @@
-# $Id: mks_d.spec,v 1.2 2003-08-18 08:08:20 gotar Exp $
+# $Id: mks_d.spec,v 1.3 2003-08-18 10:23:16 ankry Exp $
 Summary:	Simple Daemon for mks32 for Linux
-Summary(pl):	Prosty demon dla mks32 dla linuksa
+Summary(pl):	Prosty demon dla mks32 dla Linuksa
 Name:		mksd
 Version:	20030815
 Release:	1
@@ -12,14 +12,16 @@ Requires:	mks32
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Simple Daemon for mks32 for Linux. This version of daemon was created before
-and independendly of Mks_vir's(R) tool, it differs in GPL license and doesn't
-require advertising mks_vir on your web (as comercial one does).
+Simple Daemon for mks32 for Linux. This version of daemon was created
+before and independendly of Mks_vir's(R) tool, it differs in license
+(GPL) and doesn't require advertising mks_vir on your web (as
+comercial one does).
 
 %description -l pl
-Prosty demon dla mks32 dla Linuksa. Ta wersja demona powsta³a nie zale¿nie
-i przed produktem firmy Mks_vir, ró¿ni siê licencj± GPL i nie wymaga
-reklamowania mks_vir na stronie www (ja w komercyjnym mksd).
+Prosty demon dla mks32 dla Linuksa. Ta wersja demona powsta³a
+niezale¿nie i przed produktem firmy Mks_vir, ró¿ni siê licencj± (GPL)
+i nie wymaga reklamowania mks_vir na stronie www (jak w komercyjnym
+mksd).
 
 %prep
 %setup -q -n %{name}
@@ -29,17 +31,17 @@ reklamowania mks_vir na stronie www (ja w komercyjnym mksd).
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/var/spool/virus/mks/
+install -d $RPM_BUILD_ROOT{/var/spool/virus/mks/,%{_sysconfdir}/rc.d/init.d/}
+
 install mks_c mks_d $RPM_BUILD_ROOT/var/spool/virus/mks/
-install -d $RPM_BUILD_ROOT%{_sysconfdir}/rc.d/init.d/
 install rc.d_mks $RPM_BUILD_ROOT%{_sysconfdir}/rc.d/init.d/mksd
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%doc JAK_TO_DZIALA Changes *.txt
 %defattr(640,root,root,750)
+%doc JAK_TO_DZIALA Changes *.txt
 %attr(750,root,root) /var/spool/virus/mks
 %{_sysconfdir}/rc.d/init.d/mksd
 %doc *.gz
