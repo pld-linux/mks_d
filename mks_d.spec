@@ -21,7 +21,7 @@ comercial one does).
 %description -l pl
 Prosty demon dla mks32 dla Linuksa. Ta wersja demona powsta³a
 niezale¿nie i przed produktem firmy Mks_vir, ró¿ni siê licencj± (GPL)
-i nie wymaga reklamowania mks_vir na stronie www (jak w komercyjnym
+i nie wymaga reklamowania mks_vir na stronie WWW (jak w komercyjnym
 mksd).
 
 %prep
