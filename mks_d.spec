@@ -1,4 +1,3 @@
-# $Revision: 1.8 $
 Summary:	Simple Daemon for mks32 for Linux
 Summary(pl):	Prosty demon dla mks32 dla Linuksa
 Name:		mks_d
