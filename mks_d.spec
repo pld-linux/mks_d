@@ -1,4 +1,4 @@
-# $Id: mks_d.spec,v 1.1 2003-08-17 22:34:35 hunter Exp $
+# $Id: mks_d.spec,v 1.2 2003-08-18 08:08:20 gotar Exp $
 Summary:	Simple Daemon for mks32 for Linux
 Summary(pl):	Prosty demon dla mks32 dla linuksa
 Name:		mksd
@@ -17,8 +17,8 @@ and independendly of Mks_vir's(R) tool, it differs in GPL license and doesn't
 require advertising mks_vir on your web (as comercial one does).
 
 %description -l pl
-Prosty demon dla mks32 dla Linuksa. Ta wersja demona powsta³a nie zale¿nie 
-i przed produktem firmy Mks_vir, ró¿ni siê licencj± GPL i nie wymaga 
+Prosty demon dla mks32 dla Linuksa. Ta wersja demona powsta³a nie zale¿nie
+i przed produktem firmy Mks_vir, ró¿ni siê licencj± GPL i nie wymaga
 reklamowania mks_vir na stronie www (ja w komercyjnym mksd).
 
 %prep
