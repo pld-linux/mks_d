@@ -1,14 +1,13 @@
-# $Id: mks_d.spec,v 1.3 2003-08-18 10:23:16 ankry Exp $
+# $Id: mks_d.spec,v 1.4 2003-08-18 13:11:59 qboosh Exp $
 Summary:	Simple Daemon for mks32 for Linux
 Summary(pl):	Prosty demon dla mks32 dla Linuksa
-Name:		mksd
+Name:		mks_d
 Version:	20030815
 Release:	1
 License:	GPL
 Group:		Applications/Deamons
-Group(pl):	Aplikacje/Demony
-Source0:	http://www.raszyn.pl/~hunter/pliki/%{name}-%{version}.tar.gz
-Requires:	mks32
+Source0:	http://www.raszyn.pl/~hunter/pliki/mksd-%{version}.tar.gz
+Requires:	mks
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,16 +23,16 @@ i nie wymaga reklamowania mks_vir na stronie www (jak w komercyjnym
 mksd).
 
 %prep
-%setup -q -n %{name}
+%setup -q -n mksd
 
 %build
 %{__make} all
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{/var/spool/virus/mks/,%{_sysconfdir}/rc.d/init.d/}
+install -d $RPM_BUILD_ROOT{/var/spool/virus/mks,%{_sysconfdir}/rc.d/init.d}
 
-install mks_c mks_d $RPM_BUILD_ROOT/var/spool/virus/mks/
+install mks_c mks_d $RPM_BUILD_ROOT/var/spool/virus/mks
 install rc.d_mks $RPM_BUILD_ROOT%{_sysconfdir}/rc.d/init.d/mksd
 
 %clean
@@ -41,7 +40,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(640,root,root,750)
-%doc JAK_TO_DZIALA Changes *.txt
+%doc JAK_TO_DZIALA Changes *.txt *.gz
 %attr(750,root,root) /var/spool/virus/mks
 %{_sysconfdir}/rc.d/init.d/mksd
-%doc *.gz
