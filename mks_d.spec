@@ -1,4 +1,4 @@
-# $Id: mks_d.spec,v 1.6 2003-08-22 07:44:44 qboosh Exp $
+# $Id: mks_d.spec,v 1.7 2003-08-27 00:16:32 gotar Exp $
 Summary:	Simple Daemon for mks32 for Linux
 Summary(pl):	Prosty demon dla mks32 dla Linuksa
 Name:		mks_d
