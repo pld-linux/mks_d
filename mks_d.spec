@@ -1,4 +1,4 @@
-# $Id: mks_d.spec,v 1.5 2003-08-21 18:55:34 hunter Exp $
+# $Id: mks_d.spec,v 1.6 2003-08-22 07:44:44 qboosh Exp $
 Summary:	Simple Daemon for mks32 for Linux
 Summary(pl):	Prosty demon dla mks32 dla Linuksa
 Name:		mks_d
@@ -31,11 +31,10 @@ mksd).
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{/var/spool/virus/mks,%{_sysconfdir}/rc.d/init.d,\
-%{_bindir}}
+install -d $RPM_BUILD_ROOT{/var/spool/virus/mks,/etc/rc.d/init.d,%{_bindir}}
 
 install mks_c mks_d $RPM_BUILD_ROOT%{_bindir}
-install rc.d_mks $RPM_BUILD_ROOT%{_sysconfdir}/rc.d/init.d/mksd
+install rc.d_mks $RPM_BUILD_ROOT/etc/rc.d/init.d/mksd
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -44,5 +43,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(640,root,root,750)
 %doc JAK_TO_DZIALA Changes *.html 
 %attr(750,root,root) /var/spool/virus/mks
-%{_sysconfdir}/rc.d/init.d/mksd
-%{_bindir}/mks_*
+%attr(754,root,root) /etc/rc.d/init.d/mksd
+%attr(755,root,root) %{_bindir}/mks_*
