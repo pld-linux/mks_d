@@ -1,12 +1,12 @@
 Summary:	Simple Daemon for mks32 for Linux
 Summary(pl):	Prosty demon dla mks32 dla Linuksa
 Name:		mks_d
-Version:	20030821
+Version:	20040410
 Release:	1
 License:	GPL
 Group:		Applications/Deamons
 Source0:	http://duch.mimuw.edu.pl/~hunter/mks_d/mksd-%{version}.tar.bz2
-#Source0-md5: 847f408e9f072c0274dc4f0f6b131bdf
+# Source0-md5:	b5874b1dfaf482570977b63f783b6226
 Requires:	mks
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -40,7 +40,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(640,root,root,750)
-%doc JAK_TO_DZIALA Changes *.html 
+%doc JAK_TO_DZIALA Changes *.html README PO-CO TODO
 %attr(750,root,root) /var/spool/virus/mks
 %attr(754,root,root) /etc/rc.d/init.d/mksd
 %attr(755,root,root) %{_bindir}/mks_*
