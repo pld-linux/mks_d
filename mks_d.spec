@@ -41,7 +41,7 @@ install rc.d_mks $RPM_BUILD_ROOT/etc/rc.d/init.d/mksd
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(640,root,root,750)
+%defattr(644,root,root,755)
 %doc JAK_TO_DZIALA Changes *.html README PO-CO TODO
 %attr(750,root,root) /var/spool/virus/mks
 %attr(754,root,root) /etc/rc.d/init.d/mksd
