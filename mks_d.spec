@@ -1,5 +1,5 @@
 Summary:	Simple Daemon for mks32 for Linux
-Summary(pl):	Prosty demon dla mks32 dla Linuksa
+Summary(pl.UTF-8):   Prosty demon dla mks32 dla Linuksa
 Name:		mks_d
 Version:	20040410
 Release:	4
@@ -18,9 +18,9 @@ before and independendly of Mks_vir's(R) tool, it differs in license
 (GPL) and doesn't require advertising mks_vir on your web (as
 comercial one does).
 
-%description -l pl
-Prosty demon dla mks32 dla Linuksa. Ta wersja demona powsta³a
-niezale¿nie i przed produktem firmy Mks_vir, ró¿ni siê licencj± (GPL)
+%description -l pl.UTF-8
+Prosty demon dla mks32 dla Linuksa. Ta wersja demona powstaÅ‚a
+niezaleÅ¼nie i przed produktem firmy Mks_vir, rÃ³Å¼ni siÄ™ licencjÄ… (GPL)
 i nie wymaga reklamowania mks_vir na stronie WWW (jak w komercyjnym
 mksd).
 
