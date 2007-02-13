@@ -1,5 +1,5 @@
 Summary:	Simple Daemon for mks32 for Linux
-Summary(pl.UTF-8):   Prosty demon dla mks32 dla Linuksa
+Summary(pl.UTF-8):	Prosty demon dla mks32 dla Linuksa
 Name:		mks_d
 Version:	20040410
 Release:	4
